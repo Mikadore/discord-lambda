@@ -99,10 +99,14 @@ func main() {
 
 	disc, err := discordgo.New("Bot " + config.Config.Bottoken)
 
-	disc.Open()
-
 	if err != nil {
 		log.Fatalf("Error creating discord client: %s\n", err.Error())
+	}
+
+	err = disc.Open()
+
+	if err != nil {
+		log.Fatalf("Error opening a connection to discord: %s\n", err.Error())
 	}
 	
 	//jsonb, _ := json.MarshalIndent(&disc.State.User, "", "\t")
