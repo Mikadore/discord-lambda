@@ -61,7 +61,7 @@ var Commands = map[string]Command{
 				},
 			},
 		},
-		Handler: AckSourceContinue,
+		Handler:      AckSourceContinue,
 		Continuation: Timer,
 	},
 }

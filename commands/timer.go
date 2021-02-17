@@ -5,9 +5,10 @@ import (
 	//"fmt"
 	//"time"
 	"discord-lambda/config"
-	"time"
 	"github.com/bwmarrin/discordgo"
+	"time"
 )
+
 //Note, this is certainly not a good way to implement a timer
 //it's just a simple example for how continuation works
 func Timer(interaction *discordgo.Interaction) error {
@@ -20,6 +21,6 @@ func Timer(interaction *discordgo.Interaction) error {
 	_, err = discord.FollowupMessageCreate(config.Config.Appid, interaction, true, &discordgo.WebhookParams{
 		Content: "Rrrrring! Time's up!",
 	})
-	
+
 	return err
 }

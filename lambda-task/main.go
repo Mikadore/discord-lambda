@@ -4,9 +4,9 @@ import (
 	"discord-lambda/commands"
 	"encoding/json"
 	"errors"
-	"log"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/bwmarrin/discordgo"
+	"log"
 )
 
 func handler(interaction discordgo.Interaction) error {
